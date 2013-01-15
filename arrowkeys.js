@@ -5,21 +5,22 @@
  * license: MIT License
  */
 
-this.arrowkeys = (function () {
+this.arrowkeys = (function (window) {
+    'use strict';
 
     var keyEventListener = null;
 
     var nop = function () {};
 
-    var funcOrNop = function(func) {
-        return typeof func === "function" ? func : nop;
+    var funcOrNop = function (func) {
+        return typeof func === 'function' ? func : nop;
     };
 
     var removeEventLister = function () {
         if (keyEventListener != null) {
             window.document.removeEventLister('keydown', keyEventListener);
         }
-    }
+    };
 
     var exports = function (args) {
 
@@ -32,18 +33,18 @@ this.arrowkeys = (function () {
 
         keyEventListener = function (e) {
             switch (e.keyCode) {
-                case 37:
-                    left();
-                    break;
-                case 38:
-                    up();
-                    break;
-                case 39:
-                    right();
-                    break;
-                case 40:
-                    down();
-                    break;
+            case 37:
+                left();
+                break;
+            case 38:
+                up();
+                break;
+            case 39:
+                right();
+                break;
+            case 40:
+                down();
+                break;
             }
         };
 
@@ -53,4 +54,4 @@ this.arrowkeys = (function () {
     exports.removeEventLister = removeEventLister;
 
     return exports;
-}(window));
+}(this));
