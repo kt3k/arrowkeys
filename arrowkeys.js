@@ -16,7 +16,7 @@ this.arrowkeys = (function (window) {
         return typeof func === 'function' ? func : nop;
     };
 
-    var removeEventLister = function () {
+    var removeEventListener = function () {
         if (keyEventListener != null) {
             window.document.removeEventLister('keydown', keyEventListener);
         }
@@ -29,7 +29,7 @@ this.arrowkeys = (function (window) {
             left = funcOrNop(args.left),
             right = funcOrNop(args.right);
 
-        removeEventLister();
+        removeEventListener();
 
         keyEventListener = function (e) {
             switch (e.keyCode) {
@@ -51,7 +51,7 @@ this.arrowkeys = (function (window) {
         window.document.addEventListener('keydown', keyEventListener);
     };
 
-    exports.removeEventLister = removeEventLister;
+    exports.removeEventListener = removeEventListener;
 
     return exports;
 }(this));
