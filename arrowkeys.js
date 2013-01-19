@@ -52,7 +52,7 @@ this.arrowkeys = (function (window) {
     };
 
     exports.removeEventListener = removeEventListener;
-    exprots.remove = removeEventListener;
+    exports.remove = removeEventListener;
 
     return exports;
 }(this));
