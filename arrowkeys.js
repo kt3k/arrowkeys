@@ -18,7 +18,7 @@ this.arrowkeys = (function (window) {
 
     var removeEventListener = function () {
         if (keyEventListener != null) {
-            window.document.removeEventLister('keydown', keyEventListener);
+            window.document.removeEventListener('keydown', keyEventListener);
         }
     };
 
