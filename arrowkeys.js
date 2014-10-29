@@ -1,5 +1,5 @@
 /**
- * arrowkeys.js 1.0
+ * arrowkeys v0.0.0
  *
  * author: Yosiya Hinosawa
  * license: MIT License
