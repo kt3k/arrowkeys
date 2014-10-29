@@ -9,19 +9,21 @@
     'use strict';
 
     $.fn.arrowkeys = function () {
+        var that = this;
+
         this._arrowkeysHandler = function (event) {
             switch (event.keyCode) {
             case 37:
-                this.trigger('leftkey');
+                that.trigger('leftkey');
                 break;
             case 38:
-                this.trigger('upkey');
+                that.trigger('upkey');
                 break;
             case 39:
-                this.trigger('rightkey');
+                that.trigger('rightkey');
                 break;
             case 40:
-                this.trigger('downkey');
+                that.trigger('downkey');
                 break;
             }
         };
