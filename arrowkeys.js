@@ -14,15 +14,19 @@
         this._arrowkeysHandler = function (event) {
             switch (event.keyCode) {
             case 37:
+                event.preventDefault();
                 that.trigger('leftkey');
                 break;
             case 38:
+                event.preventDefault();
                 that.trigger('upkey');
                 break;
             case 39:
+                event.preventDefault();
                 that.trigger('rightkey');
                 break;
             case 40:
+                event.preventDefault();
                 that.trigger('downkey');
                 break;
             }
