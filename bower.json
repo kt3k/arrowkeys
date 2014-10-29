@@ -1,0 +1,17 @@
+{
+  "name": "arrowkeys",
+  "version": "0.0.0",
+  "authors": [
+    "Yoshiya Hinosawa <stibium121@gmail.com>"
+  ],
+  "description": "Arrowkey events for browser",
+  "main": "arrowkeys.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
