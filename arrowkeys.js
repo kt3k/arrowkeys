@@ -5,54 +5,38 @@
  * license: MIT License
  */
 
-this.arrowkeys = (function (window) {
+(function (window, $) {
     'use strict';
 
-    var keyEventListener = null;
-
-    var nop = function () {};
-
-    var funcOrNop = function (func) {
-        return typeof func === 'function' ? func : nop;
-    };
-
-    var removeEventListener = function () {
-        if (keyEventListener != null) {
-            window.document.removeEventListener('keydown', keyEventListener);
-        }
-    };
-
-    var exports = function (args) {
-
-        var up = funcOrNop(args.up),
-            down = funcOrNop(args.down),
-            left = funcOrNop(args.left),
-            right = funcOrNop(args.right);
-
-        removeEventListener();
-
-        keyEventListener = function (e) {
-            switch (e.keyCode) {
+    $.fn.arrowkeys = function () {
+        this._arrowkeysHandler = function (event) {
+            switch (event.keyCode) {
             case 37:
-                left();
+                this.trigger('leftkey');
                 break;
             case 38:
-                up();
+                this.trigger('upkey');
                 break;
             case 39:
-                right();
+                this.trigger('rightkey');
                 break;
             case 40:
-                down();
+                this.trigger('downkey');
                 break;
             }
         };
 
-        window.document.addEventListener('keydown', keyEventListener);
+        this.on('keydown', this._arrowkeysHandler);
+
+        return this;
     };
 
-    exports.removeEventListener = removeEventListener;
-    exports.remove = removeEventListener;
+    $.fn.arrowkeysUnbind = function () {
+        this.off('keydown', this._arrowkeysHandler);
 
-    return exports;
-}(this));
+        delete this._arrowkeysHandler;
+
+        return this;
+    };
+
+}(window, window.$));
