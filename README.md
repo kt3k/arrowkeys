@@ -1,4 +1,4 @@
-# arrowkeys v0.0.0
+# arrowkeys v0.1.0
 
 > events for arrow keys (→←↑↓). depends on jquery.
 
