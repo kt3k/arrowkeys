@@ -1,30 +1,32 @@
-arrowkeys.js
-============
+# arrowkeys.js
 
-*arrowkeys.js* is abstraction of event binding to arrow keys (→←↑↓).
+> events for arrow keys (→←↑↓). depends on jquery.
 
-Usage
------
+## Usage
 
-To load script:
+Load script:
 
 ```html
 <script src="path/to/arrowkeys.js"></script>
 ```
 
-To bind events:
+To bind arrowkey events:
 
 ```
-arrowkeys({
-    up: upHandler,
-    down: downHandler,
-    left: leftHandler,
-    right: rightHandler
-});
+$(document).arrowkeys();
 ```
 
-To unbind events:
+Handle each key event:
+```
+$(document)
+    .on('upkey', function () {})
+    .on('downkey', function () {})
+    .on('leftkey', function () {})
+    .on('rightkey', function () {});
+```
+
+To unbind the events:
 
 ```
-arrowkeys.remove();
+$(document).arrowkeysUnbind();
 ```
