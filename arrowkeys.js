@@ -1,5 +1,5 @@
 /**
- * arrowkeys v0.1.2
+ * arrowkeys v0.2.0
  *
  * author: Yosiya Hinosawa
  * license: MIT License
