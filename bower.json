@@ -4,7 +4,7 @@
   "authors": [
     "Yoshiya Hinosawa <stibium121@gmail.com>"
   ],
-  "description": "Arrowkey events for browser",
+  "description": "Events for arrow keys (→←↑↓). Depends on jquery.",
   "main": "arrowkeys.js",
   "license": "MIT",
   "ignore": [

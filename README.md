@@ -1,12 +1,13 @@
 # arrowkeys v0.1.2
 
-> events for arrow keys (→←↑↓). depends on jquery.
+> Events for arrow keys (→←↑↓). Depends on jquery.
 
 ## Usage
 
 Load script:
 
 ```html
+<script src="path/to/jquery.js"></script>
 <script src="path/to/arrowkeys.js"></script>
 ```
 
@@ -30,3 +31,7 @@ To unbind the events:
 ```
 $(document).arrowkeysUnbind();
 ```
+
+# License
+
+MIT

@@ -2,5 +2,6 @@
 version: 0.1.2
 files:
   README.md: 1
-  bower.json: 1
+  bower.json: '"version": "%.%.%"'
+  package.json: '"version": "%.%.%"'
   arrowkeys.js: 1
