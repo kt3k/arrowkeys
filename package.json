@@ -4,7 +4,8 @@
   "description": "Events for arrow keys (→←↑↓). Depends on jquery.",
   "main": "arrowkeys.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "souffle --semi"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/kt3k/arrowkeys/issues"
   },
-  "homepage": "https://github.com/kt3k/arrowkeys#readme"
+  "homepage": "https://github.com/kt3k/arrowkeys#readme",
+  "devDependencies": {
+    "souffle-cli": "^2.0.2"
+  }
 }
